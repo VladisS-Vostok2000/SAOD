@@ -1,0 +1,7 @@
+G:\Programs\C#\SAOD_Stack\bin\Debug\SAOD_Stack.exe.config
+G:\Programs\C#\SAOD_Stack\bin\Debug\SAOD_Stack.exe
+G:\Programs\C#\SAOD_Stack\bin\Debug\SAOD_Stack.pdb
+G:\Programs\C#\SAOD_Stack\obj\Debug\SAOD_Stack.csprojAssemblyReference.cache
+G:\Programs\C#\SAOD_Stack\obj\Debug\SAOD_Stack.csproj.CoreCompileInputs.cache
+G:\Programs\C#\SAOD_Stack\obj\Debug\SAOD_Stack.exe
+G:\Programs\C#\SAOD_Stack\obj\Debug\SAOD_Stack.pdb

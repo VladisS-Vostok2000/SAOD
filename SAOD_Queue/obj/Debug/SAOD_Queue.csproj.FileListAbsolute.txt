@@ -1,0 +1,10 @@
+G:\Programs\C#\SAOD_Queue\bin\Debug\SAOD_Queue.exe.config
+G:\Programs\C#\SAOD_Queue\bin\Debug\SAOD_Queue.exe
+G:\Programs\C#\SAOD_Queue\bin\Debug\SAOD_Queue.pdb
+G:\Programs\C#\SAOD_Queue\obj\Debug\SAOD_Queue.csprojAssemblyReference.cache
+G:\Programs\C#\SAOD_Queue\obj\Debug\SAOD_Queue.MainForm.resources
+G:\Programs\C#\SAOD_Queue\obj\Debug\SAOD_Queue.Properties.Resources.resources
+G:\Programs\C#\SAOD_Queue\obj\Debug\SAOD_Queue.csproj.GenerateResource.cache
+G:\Programs\C#\SAOD_Queue\obj\Debug\SAOD_Queue.csproj.CoreCompileInputs.cache
+G:\Programs\C#\SAOD_Queue\obj\Debug\SAOD_Queue.exe
+G:\Programs\C#\SAOD_Queue\obj\Debug\SAOD_Queue.pdb
