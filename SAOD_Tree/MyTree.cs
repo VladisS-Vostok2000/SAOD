@@ -164,7 +164,7 @@ namespace SAOD_Tree {
                 // Наименьший элемент у порога
                 if (nodeForDelete.Right.Left == null) {
                     nodeForDelete.Value = nodeForDelete.Right.Value;
-                    nodeForDelete.Right = nodeForDelete.Right.Left;
+                    nodeForDelete.Right = nodeForDelete.Right.Right;
                 }
                 else {
                     MyTreeNode<T> nodeForSwap = nodeForDelete.Right;
