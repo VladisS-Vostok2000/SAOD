@@ -70,19 +70,19 @@ namespace SAOD_Tree {
         /// <summary>
         /// True, если заданное значение содержится в дереве.
         /// </summary>
-        internal bool Contains(T value) {
+        internal bool Contains(T target) {
             MyTreeNode<T> node = first;
             while (node != null) {
-                if (value.Equals(node.Value)) {
+                int compareResult = target.CompareTo(node.Value);
+                if (compareResult == 0) {
                     return true;
                 }
+                else
+                if (compareResult == -1) {
+                    node = node.Left;
+                }
                 else {
-                    if (value.CompareTo(node.Value) == -1) {
-                        node = node.Left;
-                    }
-                    else {
-                        node = node.Right;
-                    }
+                    node = node.Right;
                 }
             }
             return false;
@@ -115,6 +115,8 @@ namespace SAOD_Tree {
         /// </summary>
         internal void Remove(T target) {
             MyTreeNode<T> nodeForDelete = first;
+            // prewNodeForDelete устаналивается с самим объектом,
+            // чтобы избежать излишних проверок при частных случаях.
             MyTreeNode<T> prewNodeForDelete = first;
             // Ищем элемент, который нужно удалить, и к нему предыдущий.
             try {
@@ -197,7 +199,6 @@ namespace SAOD_Tree {
             }
 
             Length--;
-            return;
         }
 
     }
