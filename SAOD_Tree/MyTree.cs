@@ -91,24 +91,40 @@ namespace SAOD_Tree {
         internal T[] ToArray() {
             T[] out_array = new T[Length];
             int index = new int();
-            AddValue(out_array, ref index, first);
+            AddValueToArray(out_array, ref index, first);
             return out_array;
         }
-        /// <summary>
-        /// Рекурсивно заполнит массив значениями <see cref="MyTreeNode{T}"/>.
-        /// </summary>
-        /// <param name="array"> Массив, подлежащий заполнению. </param>
-        /// <param name="index"> Индекс текущей пустой позиции массива. </param>
-        /// <param name="node"> Элемент <see cref="MyTreeNode{T}"/>, подлежащий вставке в массив. </param>
-        private void AddValue(T[] array, ref int index, MyTreeNode<T> node) {
-            array[index++] = node.Value;
-            if (node.Left != null) {
-                AddValue(array, ref index, node.Left);
+        private void AddValueToArray(T[] array, ref int arrayIndexToAdd, MyTreeNode<T> nodeToAdd) {
+            array[arrayIndexToAdd++] = nodeToAdd.Value;
+            if (nodeToAdd.Left != null) {
+                AddValueToArray(array, ref arrayIndexToAdd, nodeToAdd.Left);
             }
-            if (node.Right != null) {
-                AddValue(array, ref index, node.Right);
+            if (nodeToAdd.Right != null) {
+                AddValueToArray(array, ref arrayIndexToAdd, nodeToAdd.Right);
             }
         }
+
+        /// <summary>
+        /// Возвращает массив текущих элементов дерева в порядке возрастания.
+        /// </summary>
+        internal T[] ToSortedArray() {
+            T[] outArray = new T[Length];
+            int arrayIndexToAdd = 0;
+            AddValueToSortedArray(outArray, ref arrayIndexToAdd, first);
+            return outArray;
+        }
+        private void AddValueToSortedArray(T[] array, ref int arrayIndexToAdd, MyTreeNode<T> nodeToAdd) {
+            if (nodeToAdd.Left != null) {
+                AddValueToSortedArray(array, ref arrayIndexToAdd, nodeToAdd.Left);
+            }
+
+            array[arrayIndexToAdd++] = nodeToAdd.Value;
+
+            if (nodeToAdd.Right != null) {
+                AddValueToSortedArray(array, ref arrayIndexToAdd, nodeToAdd.Right);
+            }
+        }
+
 
         /// <summary>
         /// Удалит заданный элемент из дерева, если он есть.
